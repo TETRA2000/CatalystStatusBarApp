@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		A94D932524B0B21F00BDD29E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94D932324B0B21F00BDD29E /* LaunchScreen.storyboard */; };
 		A94D933024B0B21F00BDD29E /* CatalystStatusBarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94D932F24B0B21F00BDD29E /* CatalystStatusBarAppTests.swift */; };
 		A94D933B24B0B21F00BDD29E /* CatalystStatusBarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94D933A24B0B21F00BDD29E /* CatalystStatusBarAppUITests.swift */; };
+		A94D935524B0B27500BDD29E /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94D935424B0B27500BDD29E /* StatusBarController.swift */; };
+		A94D935B24B0B33D00BDD29E /* StatusBarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94D935A24B0B33D00BDD29E /* StatusBarAdapter.swift */; };
+		A94D935D24B0B4A800BDD29E /* AppKitGlue.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = A94D934C24B0B23D00BDD29E /* AppKitGlue.bundle */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +35,28 @@
 			remoteGlobalIDString = A94D931424B0B21700BDD29E;
 			remoteInfo = CatalystStatusBarApp;
 		};
+		A94D935E24B0B4A800BDD29E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A94D930D24B0B21700BDD29E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A94D934B24B0B23D00BDD29E;
+			remoteInfo = AppKitGlue;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A94D936024B0B4A800BDD29E /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A94D935D24B0B4A800BDD29E /* AppKitGlue.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A94D931524B0B21700BDD29E /* CatalystStatusBarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalystStatusBarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +73,14 @@
 		A94D933624B0B21F00BDD29E /* CatalystStatusBarAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalystStatusBarAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94D933A24B0B21F00BDD29E /* CatalystStatusBarAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystStatusBarAppUITests.swift; sourceTree = "<group>"; };
 		A94D933C24B0B21F00BDD29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A94D934C24B0B23D00BDD29E /* AppKitGlue.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppKitGlue.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A94D934E24B0B23D00BDD29E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A94D935224B0B24800BDD29E /* CatalystStatusBarApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CatalystStatusBarApp.entitlements; sourceTree = "<group>"; };
+		A94D935324B0B27500BDD29E /* AppKitGlue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppKitGlue-Bridging-Header.h"; sourceTree = "<group>"; };
+		A94D935424B0B27500BDD29E /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		A94D935624B0B29900BDD29E /* StatusBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusBarController.h; sourceTree = "<group>"; };
+		A94D935724B0B2B700BDD29E /* CatalystStatusBarApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CatalystStatusBarApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		A94D935A24B0B33D00BDD29E /* StatusBarAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +105,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A94D934924B0B23D00BDD29E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,7 +121,9 @@
 				A94D931724B0B21700BDD29E /* CatalystStatusBarApp */,
 				A94D932E24B0B21F00BDD29E /* CatalystStatusBarAppTests */,
 				A94D933924B0B21F00BDD29E /* CatalystStatusBarAppUITests */,
+				A94D934D24B0B23D00BDD29E /* AppKitGlue */,
 				A94D931624B0B21700BDD29E /* Products */,
+				A94D935C24B0B4A800BDD29E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +133,7 @@
 				A94D931524B0B21700BDD29E /* CatalystStatusBarApp.app */,
 				A94D932B24B0B21F00BDD29E /* CatalystStatusBarAppTests.xctest */,
 				A94D933624B0B21F00BDD29E /* CatalystStatusBarAppUITests.xctest */,
+				A94D934C24B0B23D00BDD29E /* AppKitGlue.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +141,17 @@
 		A94D931724B0B21700BDD29E /* CatalystStatusBarApp */ = {
 			isa = PBXGroup;
 			children = (
+				A94D935824B0B32100BDD29E /* StatusBar */,
+				A94D935924B0B32900BDD29E /* View */,
+				A94D935224B0B24800BDD29E /* CatalystStatusBarApp.entitlements */,
 				A94D931824B0B21700BDD29E /* AppDelegate.swift */,
 				A94D931A24B0B21700BDD29E /* SceneDelegate.swift */,
-				A94D931C24B0B21700BDD29E /* ContentView.swift */,
 				A94D931E24B0B21F00BDD29E /* Assets.xcassets */,
 				A94D932324B0B21F00BDD29E /* LaunchScreen.storyboard */,
 				A94D932624B0B21F00BDD29E /* Info.plist */,
 				A94D932024B0B21F00BDD29E /* Preview Content */,
+				A94D935624B0B29900BDD29E /* StatusBarController.h */,
+				A94D935724B0B2B700BDD29E /* CatalystStatusBarApp-Bridging-Header.h */,
 			);
 			path = CatalystStatusBarApp;
 			sourceTree = "<group>";
@@ -136,6 +182,39 @@
 			path = CatalystStatusBarAppUITests;
 			sourceTree = "<group>";
 		};
+		A94D934D24B0B23D00BDD29E /* AppKitGlue */ = {
+			isa = PBXGroup;
+			children = (
+				A94D934E24B0B23D00BDD29E /* Info.plist */,
+				A94D935424B0B27500BDD29E /* StatusBarController.swift */,
+				A94D935324B0B27500BDD29E /* AppKitGlue-Bridging-Header.h */,
+			);
+			path = AppKitGlue;
+			sourceTree = "<group>";
+		};
+		A94D935824B0B32100BDD29E /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				A94D935A24B0B33D00BDD29E /* StatusBarAdapter.swift */,
+			);
+			path = StatusBar;
+			sourceTree = "<group>";
+		};
+		A94D935924B0B32900BDD29E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A94D931C24B0B21700BDD29E /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A94D935C24B0B4A800BDD29E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +225,12 @@
 				A94D931124B0B21700BDD29E /* Sources */,
 				A94D931224B0B21700BDD29E /* Frameworks */,
 				A94D931324B0B21700BDD29E /* Resources */,
+				A94D936024B0B4A800BDD29E /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A94D935F24B0B4A800BDD29E /* PBXTargetDependency */,
 			);
 			name = CatalystStatusBarApp;
 			productName = CatalystStatusBarApp;
@@ -192,6 +273,23 @@
 			productReference = A94D933624B0B21F00BDD29E /* CatalystStatusBarAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A94D934B24B0B23D00BDD29E /* AppKitGlue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A94D934F24B0B23D00BDD29E /* Build configuration list for PBXNativeTarget "AppKitGlue" */;
+			buildPhases = (
+				A94D934824B0B23D00BDD29E /* Sources */,
+				A94D934924B0B23D00BDD29E /* Frameworks */,
+				A94D934A24B0B23D00BDD29E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppKitGlue;
+			productName = AppKitGlue;
+			productReference = A94D934C24B0B23D00BDD29E /* AppKitGlue.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +311,10 @@
 						CreatedOnToolsVersion = 11.5;
 						TestTargetID = A94D931424B0B21700BDD29E;
 					};
+					A94D934B24B0B23D00BDD29E = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+					};
 				};
 			};
 			buildConfigurationList = A94D931024B0B21700BDD29E /* Build configuration list for PBXProject "CatalystStatusBarApp" */;
@@ -231,6 +333,7 @@
 				A94D931424B0B21700BDD29E /* CatalystStatusBarApp */,
 				A94D932A24B0B21F00BDD29E /* CatalystStatusBarAppTests */,
 				A94D933524B0B21F00BDD29E /* CatalystStatusBarAppUITests */,
+				A94D934B24B0B23D00BDD29E /* AppKitGlue */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +363,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A94D934A24B0B23D00BDD29E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -270,6 +380,7 @@
 				A94D931924B0B21700BDD29E /* AppDelegate.swift in Sources */,
 				A94D931B24B0B21700BDD29E /* SceneDelegate.swift in Sources */,
 				A94D931D24B0B21700BDD29E /* ContentView.swift in Sources */,
+				A94D935B24B0B33D00BDD29E /* StatusBarAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +400,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A94D934824B0B23D00BDD29E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A94D935524B0B27500BDD29E /* StatusBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -301,6 +420,12 @@
 			isa = PBXTargetDependency;
 			target = A94D931424B0B21700BDD29E /* CatalystStatusBarApp */;
 			targetProxy = A94D933724B0B21F00BDD29E /* PBXContainerItemProxy */;
+		};
+		A94D935F24B0B4A800BDD29E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = maccatalyst;
+			target = A94D934B24B0B23D00BDD29E /* AppKitGlue */;
+			targetProxy = A94D935E24B0B4A800BDD29E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -434,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CatalystStatusBarApp/CatalystStatusBarApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystStatusBarApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 788YH48Y3Q;
@@ -445,8 +571,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TETRA2000.CatalystStatusBarApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = CatalystStatusBarApp/StatusBarController.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -454,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CatalystStatusBarApp/CatalystStatusBarApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CatalystStatusBarApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 788YH48Y3Q;
@@ -465,8 +594,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = TETRA2000.CatalystStatusBarApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = CatalystStatusBarApp/StatusBarController.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -554,6 +685,57 @@
 			};
 			name = Release;
 		};
+		A94D935024B0B23D00BDD29E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 788YH48Y3Q;
+				INFOPLIST_FILE = AppKitGlue/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_BUNDLE_IDENTIFIER = TETRA2000.AppKitGlue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AppKitGlue/AppKitGlue-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		A94D935124B0B23D00BDD29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 788YH48Y3Q;
+				INFOPLIST_FILE = AppKitGlue/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.16;
+				PRODUCT_BUNDLE_IDENTIFIER = TETRA2000.AppKitGlue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AppKitGlue/AppKitGlue-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +771,15 @@
 			buildConfigurations = (
 				A94D934624B0B21F00BDD29E /* Debug */,
 				A94D934724B0B21F00BDD29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A94D934F24B0B23D00BDD29E /* Build configuration list for PBXNativeTarget "AppKitGlue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A94D935024B0B23D00BDD29E /* Debug */,
+				A94D935124B0B23D00BDD29E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
